@@ -1,0 +1,19 @@
+---
+version: '3'
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=secrets
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./create.sql:/docker-entrypoint-initdb.d/create.sql
+      - db:/var/lib/postgresql/data-secrets
+
+volumes:
+  db:
+    driver: local
