@@ -1,6 +1,6 @@
-# Java Mentoring Program: Spring Security
+# Spring Security
 
-This maven-based project contains the exercises defined in the 'spring-security' module of Java Mentoring program.
+This maven-based project contains a set of examples of how to use extended features of Spring Security (out of the default approaches/conventions)
 
 0) To run the project one have the following options:
 
@@ -16,7 +16,7 @@ Both applications require a PostgreSQL DB running instance. For the sake of simp
 
 2) Application 1: **demo-app** 
 
-The first part of the homework is implemented in the demo-app Spring application. It includes the following:
+The first is a demo-app Spring application. It includes the following:
 - Custom security implementation via backing the users (+roles) in a postgreSQL instance. 
 - /info endpoint only visible to users with authorities: VIEW_INFO
 - /about endpoint non-protected
@@ -28,7 +28,7 @@ The first part of the homework is implemented in the demo-app Spring application
 
 3) Application 3: **secret-provider**
 
-The second part of the homework requirements is implemented in the *secret-provider* Spring application. It includes the following:
+The second part is the *secret-provider* Spring application. It includes the following:
 
 - Custom security implementation via backing the users (+roles) in a postgreSQL instance.
 - /otp creates, persists and provide one time password (1 minute old) to access to endpoint /secret-information
